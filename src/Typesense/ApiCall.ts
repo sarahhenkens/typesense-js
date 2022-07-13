@@ -122,6 +122,7 @@ export default class ApiCall {
 
       try {
         let requestOptions: AxiosRequestConfig = {
+          withCredentials: true,
           method: requestType,
           url: this.uriFor(endpoint, node),
           headers: Object.assign({}, this.defaultHeaders(), additionalHeaders, this.additionalUserHeaders),
